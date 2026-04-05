@@ -11,7 +11,7 @@ Previously Country Manager at Bolt (Malta & Cyprus). Now focused on designing an
 ## Projects
 
 ### P1 — Lead Enrichment & Qualification System
-Automated lead scoring pipeline. Enriches leads from Google Sheets via web scraping and OpenAI, routes by score, creates CRM contacts, and sends Slack/email alerts.
+Automated pipeline that replaces manual lead research — enriching, scoring, and routing inbound leads from Google Sheets to CRM in seconds, with no human intervention.
 
 **Tools:** Make.com · OpenAI · HubSpot · Google Sheets · Slack · Gmail  
 **Status:** Complete v1.6  
@@ -20,7 +20,7 @@ Automated lead scoring pipeline. Enriches leads from Google Sheets via web scrap
 ---
 
 ### P2 — Automated Data Validation & Reporting System
-Dual-scenario validation pipeline. Iterates records, flags invalid data to Slack in real time, aggregates valid records into an AI-generated digest.
+Automated data quality system that validates every record on schedule, alerts on errors instantly via Slack, and delivers an AI-generated summary of clean data — no manual review required.
 
 **Tools:** Make.com · OpenAI · Google Sheets · Slack  
 **Status:** Complete v1.6  
@@ -32,5 +32,5 @@ Dual-scenario validation pipeline. Iterates records, flags invalid data to Slack
 Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
-**Status:** Complete  
+**Status:** Ongoing 
 [→ View project](./p3-dobra-energie)
