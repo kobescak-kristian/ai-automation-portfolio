@@ -28,9 +28,9 @@ Automated data quality system that validates every record on schedule, alerts on
 
 ---
 
-### P3 — Automated PDF Generation Pipeline
+### Client Project — Automated PDF Generation Pipeline
 Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
-**Status:** Ongoing 
-[→ View project](./p3-dobra-energie)
+In Progress — awaiting client feedback
+[→ View project](./p3-pdf-generation/client-pdf-automation)
