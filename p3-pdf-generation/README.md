@@ -13,6 +13,13 @@ A European energy supplier needed to produce price list PDFs across 3 distributo
 4. Adobe InDesign Data Merge consumes the CSV and generates branded PDFs automatically
 5. Output: 24 templates × 3 distributors = 72 PDFs per pricing update
 
+## Outcome
+Without this system: a designer manually runs 24 InDesign templates 
+per distributor, every time prices change — 90+ minutes of repetitive work.
+With this system: pricing data updated in Google Sheets triggers 
+a single script execution that generates all 72 PDFs automatically, 
+verified against 765 field mappings before output.
+
 ## Tools
 Python · Adobe InDesign Data Merge · Google Sheets
 
