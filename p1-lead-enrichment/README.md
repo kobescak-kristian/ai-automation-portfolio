@@ -1,7 +1,7 @@
 # P1 — Lead Enrichment & Qualification System
 
 ## Overview
-Automated pipeline that enriches and scores inbound leads without manual research.
+Automated pipeline that replaces manual lead research for sales teams — enriching, scoring, and routing inbound leads from Google Sheets to CRM in seconds, with no human intervention.
 
 ## Problem Solved
 Sales teams waste time manually researching leads. This system automates enrichment, scoring, and routing — triggering CRM creation and alerts only for high-value leads.
@@ -17,6 +17,12 @@ Sales teams waste time manually researching leads. This system automates enrichm
 
 ## Tools
 Make.com · OpenAI · HubSpot · Google Sheets · Slack · Gmail
+
+## Outcome
+Without this system: a sales rep manually researches each lead, decides priority, logs to CRM, sends alerts.
+With this system: the entire process runs automatically on new row entry.
+High-value leads reach HubSpot and the sales team inbox within seconds.
+Medium and low leads are logged and tracked without consuming rep time.
 
 ## Status
 Complete — v1.6
