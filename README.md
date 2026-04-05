@@ -32,5 +32,6 @@ Automated data quality system that validates every record on schedule, alerts on
 Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
-In Progress — awaiting client feedback
+In Progress — awaiting client feedback 
+
 [→ View project](./p3-pdf-generation/client-pdf-automation)
