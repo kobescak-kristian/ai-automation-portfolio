@@ -1,4 +1,4 @@
-# P3 — Automated PDF Generation Pipeline
+# Client — Automated PDF Generation Pipeline
 
 ## Overview
 Python automation that replaces a 1.5-hour manual Adobe InDesign workflow for generating branded price list PDFs.
