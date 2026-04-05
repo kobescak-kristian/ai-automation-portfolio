@@ -28,7 +28,7 @@ Dual-scenario validation pipeline. Iterates records, flags invalid data to Slack
 
 ---
 
-### P3 — Dobrá Energie: PDF Generation Pipeline
+### P3 — Automated PDF Generation Pipeline
 Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
