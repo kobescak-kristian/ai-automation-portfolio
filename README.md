@@ -4,7 +4,7 @@ AI Automation Specialist based in Malta. I build intelligent automation systems 
 
 Previously Country Manager at Bolt (Malta & Cyprus). Now focused on designing and building AI-powered business automation.
 
-📎 [LinkedIn](https://www.linkedin.com/in/kristiankobescak)
+🔗 [LinkedIn](https://www.linkedin.com/in/kristiankobescak) · [Upwork](https://www.upwork.com/freelancers/~0177209118ed3d6e51)
 
 ---
 
