@@ -24,7 +24,7 @@ verified against 765 field mappings before output.
 Python · Adobe InDesign Data Merge · Google Sheets
 
 ## Status
-Complete — v1.0
+Update P3 README — add outcome section
 
 ## Files
 - `generate_csv.py` — Data extraction and CSV generation
