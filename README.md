@@ -33,4 +33,5 @@ Python automation replacing a 1.5-hour manual InDesign workflow. Generates brand
 
 **Tools:** Python · Adobe InDesign Data Merge  
 In Progress — awaiting client feedback 
+
 [→ View project](./p3-pdf-generation/client-pdf-automation)
