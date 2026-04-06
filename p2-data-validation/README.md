@@ -36,3 +36,16 @@ Complete — v1.6
 - `wrapper-blueprint.json` — Scenario A (scheduler wrapper)
 - `diagram.jpg` — Clean flow diagram
 - `screenshot.jpg` — Live Make.com scenario
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Trigger type | Scheduled + Webhook (dual-scenario) |
+| Input source | Google Sheets |
+| Output destinations | Slack |
+| AI role | Digest generation from valid records |
+| Routing logic | Valid / Invalid |
+| Deduplication | None |
+| Business pattern | Validation + error alerting + reporting |
+| Edge cases | Invalid records · Google Sheets failure · OpenAI failure |

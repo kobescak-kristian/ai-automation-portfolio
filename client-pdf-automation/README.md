@@ -29,3 +29,16 @@ Update P3 README — add outcome section
 ## Files
 - `generate_csv.py` — Data extraction and CSV generation
 - `verify_output.py` — Output validation script
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Trigger type | Manual script execution |
+| Input source | Google Sheets + Excel workbook |
+| Output destinations | Local PDF output folder |
+| AI role | None — deterministic data transformation |
+| Routing logic | None |
+| Deduplication | None |
+| Business pattern | Data extraction + document generation |
+| Edge cases | Field mapping mismatches · missing distributor data |

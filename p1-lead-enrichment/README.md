@@ -31,3 +31,16 @@ Complete — v1.6
 - `blueprint.json` — Make.com scenario export
 - `diagram.jpg` — Clean flow diagram
 - `screenshot.jpg` — Live Make.com scenario
+
+## Metadata
+
+| Field | Value |
+|---|---|
+| Trigger type | New Google Sheets row |
+| Input source | Google Sheets + HTTP website scrape |
+| Output destinations | HubSpot · Gmail · Slack · Google Sheets |
+| AI role | Lead scoring + JSON classification |
+| Routing logic | High / Medium / Low |
+| Deduplication | Make Data Store |
+| Business pattern | Enrichment + qualification + routing |
+| Edge cases | Duplicate leads · low-confidence scores |
