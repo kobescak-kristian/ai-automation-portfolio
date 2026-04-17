@@ -24,6 +24,15 @@ With this system: the entire process runs automatically on new row entry.
 High-value leads reach HubSpot and the sales team inbox within seconds.
 Medium and low leads are logged and tracked without consuming rep time.
 
+## Known Limitations & Production Path
+
+**No ambiguous routing:** OpenAI classification forces all leads into 
+High or Medium/Low with no human review option for uncertain cases. 
+A lead with mixed signals gets routed rather than flagged.
+Production upgrade: add confidence scoring to OpenAI prompt output — 
+route low-confidence decisions to Slack for manual review before 
+CRM action. This pattern will be implemented in P4.
+
 ## Status
 Complete — v1.6
 
