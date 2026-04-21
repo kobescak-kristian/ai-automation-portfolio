@@ -1,0 +1,187 @@
+"""
+Government Portal Data Extraction System
+Extraction pipeline sample — illustrative extract showing core patterns only.
+
+Full implementation available on request.
+
+Demonstrates:
+- Checkpoint/resume system for high-volume processing
+- Error handling with retry and skip logic
+- Multi-tab Excel export with formatting and hyperlinks
+"""
+
+import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+from datetime import datetime
+import os
+
+
+# --- CHECKPOINT SYSTEM ---
+# Saves progress after every record.
+# On restart, already-processed records are skipped.
+# Zero progress lost on interruption at any volume.
+
+def load_checkpoint(filepath):
+    """Load previously fetched records from checkpoint file."""
+    if os.path.exists(filepath):
+        df = pd.read_csv(filepath)
+        already_fetched = set(df["Record ID"].astype(str).tolist())
+        records = df.to_dict("records")
+        print(f"Resuming — {len(already_fetched)} records already processed.")
+        return already_fetched, records
+    return set(), []
+
+
+def save_checkpoint(filepath, records):
+    """Save current progress to checkpoint file."""
+    pd.DataFrame(records).to_csv(filepath, index=False)
+
+
+# --- ERROR HANDLING ---
+# Retry once on failure, skip after second failure.
+# Run never stops for a single bad record.
+
+def fetch_with_retry(fetch_fn, record_id, max_attempts=2):
+    """
+    Attempt fetch with single retry.
+    Returns result or None on repeated failure.
+    """
+    for attempt in range(max_attempts):
+        try:
+            return fetch_fn()
+        except Exception as e:
+            print(f"  Attempt {attempt + 1} failed for {record_id}: {e}")
+            if attempt == max_attempts - 1:
+                print(f"  Skipping {record_id} after {max_attempts} failed attempts.")
+                return None
+    return None
+
+
+# --- DEDUPLICATION ---
+# Portal serves duplicate rows for some records.
+# Deduplicated by composite key before storage.
+
+def deduplicate_rows(rows, key_fields):
+    """
+    Remove duplicate rows based on composite key.
+    Returns deduplicated list preserving order.
+    """
+    seen = set()
+    unique = []
+    for row in rows:
+        key = tuple(row.get(f, "") for f in key_fields)
+        if key not in seen:
+            seen.add(key)
+            unique.append(row)
+    return unique
+
+
+# --- EXCEL EXPORT ---
+# 3-tab workbook: Records, Detail, Summary.
+# Dark blue headers, alternating rows, frozen panes,
+# auto column widths, clickable hyperlinks.
+
+def format_sheet(ws, link_cols=None):
+    """
+    Apply consistent formatting to a worksheet.
+    Converts URL values to clickable hyperlinks.
+    """
+    if link_cols is None:
+        link_cols = []
+
+    header_font = Font(bold=True, color="FFFFFF")
+    header_fill = PatternFill("solid", fgColor="1F4E79")
+    header_alignment = Alignment(
+        horizontal="center",
+        vertical="center",
+        wrap_text=True
+    )
+    light_blue = PatternFill("solid", fgColor="DCE6F1")
+    hyperlink_font = Font(color="0563C1", underline="single")
+    thin = Side(style="thin")
+    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+
+    # identify link columns by header name
+    link_col_indices = set()
+    for cell in ws[1]:
+        if cell.value in link_cols:
+            link_col_indices.add(cell.column)
+
+    # format headers
+    for cell in ws[1]:
+        if cell.value:
+            cell.font = header_font
+            cell.fill = header_fill
+            cell.alignment = header_alignment
+
+    ws.freeze_panes = "A2"
+
+    # auto column widths
+    for col in ws.columns:
+        max_len = 0
+        col_letter = get_column_letter(col[0].column)
+        for cell in col:
+            try:
+                if cell.value:
+                    max_len = max(max_len, len(str(cell.value)))
+            except Exception:
+                pass
+        ws.column_dimensions[col_letter].width = min(max_len + 4, 40)
+
+    # alternating rows + hyperlinks + borders
+    for i, row in enumerate(ws.iter_rows(min_row=2), start=2):
+        for cell in row:
+            if i % 2 == 0:
+                cell.fill = light_blue
+            if cell.column in link_col_indices:
+                if cell.value and str(cell.value).startswith("http"):
+                    cell.hyperlink = cell.value
+                    cell.value = "Open Link"
+                    cell.font = hyperlink_font
+            cell.border = border
+
+
+def export_to_excel(df_records, df_details, summary_tables):
+    """
+    Export all data to formatted 3-tab Excel workbook.
+    Returns timestamped filename.
+    """
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"output_{timestamp}.xlsx"
+
+    with pd.ExcelWriter(filename, engine="openpyxl") as writer:
+        df_records.to_excel(writer, sheet_name="Records", index=False)
+        if not df_details.empty:
+            df_details.to_excel(writer, sheet_name="Details", index=False)
+        # summary tables written sequentially with spacing
+        start_row = 0
+        for table in summary_tables:
+            table.to_excel(
+                writer,
+                sheet_name="Summary",
+                index=False,
+                startrow=start_row
+            )
+            start_row += len(table) + 3
+
+    wb = load_workbook(filename)
+    format_sheet(wb["Records"], link_cols=["Detail Link", "Evidence Link"])
+    if "Details" in wb.sheetnames:
+        format_sheet(wb["Details"], link_cols=["Document Link MT", "Document Link EN"])
+    if "Summary" in wb.sheetnames:
+        format_sheet(wb["Summary"])
+    wb.save(filename)
+
+    return filename
+
+
+# --- MAIN PATTERN (illustrative) ---
+# Full implementation available on request.
+
+def main():
+    CHECKPOINT_FILE = "checkpoint.csv"
+
+    # load checkpoint — resume if interrupted
+    already_fetched, recor
