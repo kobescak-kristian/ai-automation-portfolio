@@ -35,3 +35,17 @@ Python automation replacing a 1.5-hour manual InDesign workflow. Generates brand
 In Progress — awaiting client feedback 
 
 [→ View project](./p3-pdf-generation/client-pdf-automation)
+
+---
+
+### P5 — Portal Data Extraction System
+
+Python automation that extracts structured contravention data 
+from a web-based portal with no export function. Handles dynamic 
+content loading via browser automation, checkpoint/resume system 
+for high-volume processing, exports formatted 3-tab Excel with 
+full hearing history and document links.
+
+**Tools:** Python · Selenium · undetected-chromedriver · BeautifulSoup4 · pandas · openpyxl
+**Status:** Complete v1.0
+[→ View project](./p5-portal-data-extraction)
