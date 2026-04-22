@@ -1,3 +1,14 @@
+## Flagship System
+
+### AI Workflow Reliability Engine — v2.0
+A validation and routing layer that makes AI output safe for 
+operations. Handles invalid responses, fallback logic, 
+routing, notifications, and full audit trail.
+
+**→ [View flagship repo](https://github.com/kobescak-kristian/ai-workflow-reliability-engine)**
+
+---
+
 # AI Automation Portfolio — Kristian Kobescak
 
 AI Automation Specialist based in Malta. I build intelligent automation systems using Make.com, OpenAI, and Python.
