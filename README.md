@@ -11,7 +11,7 @@ routing, notifications, and full audit trail.
 
 # AI Automation Portfolio — Kristian Kobescak
 
-AI Automation Specialist based in Malta. I build intelligent automation systems using Make.com, OpenAI, and Python.
+AI Decision Systems Builder based in Malta. I build intelligent automation systems using Make.com, OpenAI, and Python.
 
 Previously Country Manager at Bolt (Malta & Cyprus). Now focused on designing and building AI-powered business automation.
 
