@@ -38,8 +38,8 @@ Complete — v1.6
 
 ## Files
 - `blueprint.json` — Make.com scenario export
-- `diagram.jpg` — Clean flow diagram
-- `screenshot.jpg` — Live Make.com scenario
+- `Lead Enrichment System diagram.jpg` — Clean flow diagram
+- `Lead Enrichment System.jpg` — Live Make.com scenario
 
 ## Metadata
 
