@@ -1,11 +1,11 @@
-## Flagship System
+﻿## Flagship System
 
 ### AI Workflow Reliability Engine — v2.0
 A validation and routing layer that makes AI output safe for 
 operations. Handles invalid responses, fallback logic, 
 routing, notifications, and full audit trail.
 
-**→ [View flagship repo](https://github.com/kobescak-kristian/ai-workflow-reliability-engine)**
+**→ [View flagship repo](https://github.com/kobescak-kristian/ai-reliability-engine)**
 
 ---
 
@@ -43,8 +43,7 @@ Automated data quality system that validates every record on schedule, alerts on
 Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
-In Progress — awaiting client feedback 
-
+**Status:** Awaiting client feedback  
 [→ View project](./p3-pdf-generation/client-pdf-automation)
 
 ---
