@@ -1,6 +1,6 @@
 ﻿## Flagship System
 
-### AI Workflow Reliability Engine — v2.0
+### AI Reliability Engine — v2.0
 A validation and routing layer that makes AI output safe for 
 operations. Handles invalid responses, fallback logic, 
 routing, notifications, and full audit trail.
