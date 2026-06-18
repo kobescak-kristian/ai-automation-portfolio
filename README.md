@@ -1,28 +1,35 @@
-﻿## Flagship System
+# AI Decision & Operations Systems Portfolio — Kristian Kobescak
 
-### AI Reliability Engine — v2.0
-A validation and routing layer that makes AI output safe for 
-operations. Handles invalid responses, fallback logic, 
-routing, notifications, and full audit trail.
-
-**→ [View flagship repo](https://github.com/kobescak-kristian/ai-reliability-engine)**
+Former operations leader (Bolt Malta & Cyprus) building production-style AI systems for operational workflows: validation, decision evaluation, impact scoring, workflow execution, and retrieval-grounded decision support.
 
 ---
 
-# AI Automation Portfolio — Kristian Kobescak
+## Flagship System
 
-AI Decision Systems Builder based in Malta. I build intelligent automation systems using Make.com, OpenAI, and Python.
+### Five-Engine AI Decision System
 
-Previously Country Manager at Bolt (Malta & Cyprus). Now focused on designing and building AI-powered business automation.
+A connected portfolio of five standalone engines showing how AI can be made usable inside real operational workflows:
 
-🔗 [LinkedIn](https://www.linkedin.com/in/kristiankobescak) · [Upwork](https://www.upwork.com/freelancers/~0177209118ed3d6e51)
+1. **AI Reliability Engine** — prevents invalid AI outputs from reaching business workflows
+2. **AI Decision Engine** — tracks outcomes and evaluates whether AI-assisted decisions were correct
+3. **AI Impact Scoring Engine** — measures financial consequences and tunes decision thresholds
+4. **AI Execution Engine** — executes workflows deterministically and recommends operational improvements
+5. **AI Context Engine** — grounds decisions in retrieved precedent and explains them
+
+## Featured Systems
+
+- **[AI Reliability Engine](https://github.com/kobescak-kristian/ai-reliability-engine)**
+- **[AI Decision Engine](https://github.com/kobescak-kristian/ai-decision-engine)**
+- **[AI Impact Scoring Engine](https://github.com/kobescak-kristian/ai-impact-scoring-engine)**
+- **[AI Execution Engine](https://github.com/kobescak-kristian/ai-execution-engine)**
+- **[AI Context Engine](https://github.com/kobescak-kristian/ai-context-engine)**
 
 ---
 
-## Projects
+## Earlier Automation Projects
 
 ### P1 — Lead Enrichment & Qualification System
-Automated pipeline that replaces manual lead research — enriching, scoring, and routing inbound leads from Google Sheets to CRM in seconds, with no human intervention.
+Automated pipeline replacing manual lead research — enriching, scoring, and routing inbound leads from Google Sheets to CRM.
 
 **Tools:** Make.com · OpenAI · HubSpot · Google Sheets · Slack · Gmail  
 **Status:** Complete v1.6  
@@ -31,7 +38,7 @@ Automated pipeline that replaces manual lead research — enriching, scoring, an
 ---
 
 ### P2 — Automated Data Validation & Reporting System
-Automated data quality system that validates every record on schedule, alerts on errors instantly via Slack, and delivers an AI-generated summary of clean data — no manual review required.
+Automated data quality system — validates records on schedule, alerts on errors via Slack, and delivers AI-generated data summaries.
 
 **Tools:** Make.com · OpenAI · Google Sheets · Slack  
 **Status:** Complete v1.6  
@@ -39,23 +46,22 @@ Automated data quality system that validates every record on schedule, alerts on
 
 ---
 
+### P5 — Portal Data Extraction System
+Python automation extracting structured contravention data from a web portal with no export function. Handles dynamic content loading, checkpoint/resume for high-volume processing, and exports formatted Excel output.
+
+**Tools:** Python · Selenium · BeautifulSoup4 · pandas · openpyxl  
+**Status:** Complete v1.0  
+[→ View project](./p5-portal-data-extraction)
+
+---
+
 ### Client Project — Automated PDF Generation Pipeline
-Python automation replacing a 1.5-hour manual InDesign workflow. Generates branded price list PDFs across 3 distributors and 24 templates from structured data.
+Python prototype replacing a manual InDesign workflow. Generates branded price list PDFs across multiple distributors and templates from structured data.
 
 **Tools:** Python · Adobe InDesign Data Merge  
-**Status:** Awaiting client feedback  
+**Status:** Prototype — awaiting client feedback  
 [→ View project](./p3-pdf-generation/client-pdf-automation)
 
 ---
 
-### P5 — Portal Data Extraction System
-
-Python automation that extracts structured contravention data 
-from a web-based portal with no export function. Handles dynamic 
-content loading via browser automation, checkpoint/resume system 
-for high-volume processing, exports formatted 3-tab Excel with 
-full hearing history and document links.
-
-**Tools:** Python · Selenium · undetected-chromedriver · BeautifulSoup4 · pandas · openpyxl
-**Status:** Complete v1.0
-[→ View project](./p5-portal-data-extraction)
+[LinkedIn](https://www.linkedin.com/in/kristiankobescak) · [GitHub Portfolio](https://github.com/kobescak-kristian/ai-automation-portfolio)
